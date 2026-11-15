@@ -1,131 +1,106 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
+    <title>Contact Me | Thanawat</title>
+    <link rel="stylesheet" href="style.css">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        .contact-container {
+            max-width: 850px;
+            margin: 50px auto;
+            padding: 45px;
+            background: #fffaf0;
+            border: 1px solid #d8c49a;
+            border-radius: 15px;
+            color: #183c2b;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f5ff;
-            background-image: radial-gradient(#b5ccf5 1px, transparent 1px);
-            background-size: 24px 24px;
-            color: #183153;
-            min-height: 100vh;
-            padding: 20px;
+        .contact-subtitle {
+            color: #a52e32;
+            letter-spacing: 3px;
+            font-size: 13px;
+            margin-bottom: 15px;
         }
 
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 50px 40px 40px;
-            border: 1px solid #d5e0f0;
-            border-radius: 14px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .subtitle {
-            font-size: 12px;
-            letter-spacing: 2px;
-            color: #4269a5;
-            margin-bottom: 16px;
-        }
-
-        h1 {
+        .contact-container h1 {
+            color: #17452f;
             font-size: 32px;
-            margin-bottom: 22px;
-            color: #183153;
+            margin-bottom: 15px;
         }
 
-        .name {
-            font-size: 16px;
-            margin-bottom: 34px;
+        .contact-name {
+            margin-bottom: 30px;
+            color: #65553c;
         }
 
-        hr {
-            border: none;
-            border-top: 1px solid #d5e0f0;
+        .contact-container hr {
+            border: 0;
+            border-top: 1px solid #d8c49a;
             margin-bottom: 30px;
         }
 
-        ol {
-            padding-left: 26px;
+        .contact-list {
+            padding-left: 25px;
         }
 
-        li {
-            padding-left: 5px;
+        .contact-list li {
             margin-bottom: 18px;
+            padding-left: 5px;
         }
 
         .contact-box {
-            border: 1px solid #3865bd;
+            border: 1px solid #b99b5b;
+            border-left: 5px solid #17452f;
+            background: #fffdf7;
+            padding: 18px;
             border-radius: 9px;
-            padding: 14px 12px;
-            min-height: 85px;
             transition: 0.3s;
         }
 
         .contact-box:hover {
-            background-color: #f5f8ff;
-            transform: translateY(-2px);
+            border-left-color: #a52e32;
+            transform: translateY(-3px);
         }
 
         .contact-box h3 {
-            font-size: 15px;
-            margin-bottom: 16px;
+            color: #17452f;
+            font-size: 16px;
+            margin-bottom: 12px;
         }
 
-        .contact-box p,
         .contact-box a {
+            color: #a52e32;
+            text-decoration: none;
             font-size: 14px;
-            color: #183153;
+            overflow-wrap: anywhere;
         }
 
         .contact-box a:hover {
-            color: #3865bd;
+            text-decoration: underline;
         }
 
-        .back-button {
+        .contact-back {
             display: inline-block;
-            background-color: #3865a8;
-            color: white;
+            margin-top: 18px;
+            padding: 13px 23px;
+            background: #17452f;
+            color: #fffaf0;
             text-decoration: none;
-            padding: 14px 22px;
-            border-radius: 6px;
-            margin-top: 16px;
+            border-radius: 7px;
             transition: 0.3s;
         }
 
-        .back-button:hover {
-            background-color: #244779;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 28px;
-            font-size: 13px;
-        }
-
-        footer a {
-            color: #315c9c;
-            margin: 0 5px;
+        .contact-back:hover {
+            background: #a52e32;
         }
 
         @media (max-width: 600px) {
-            .container {
-                padding: 35px 22px;
-            }
-
-            h1 {
-                font-size: 27px;
+            .contact-container {
+                margin: 20px auto;
+                padding: 25px 18px;
             }
         }
     </style>
@@ -133,64 +108,56 @@
 
 <body>
 
-    <div class="container">
+    <div class="contact-container">
 
-        <p class="subtitle">CONTACT INFORMATION</p>
+        <p class="contact-subtitle">CONTACT INFORMATION</p>
 
         <h1>Contact Me</h1>
 
-        <p class="name">ธนวัฒน์ จงสูงเนิน</p>
+        <p class="contact-name">
+            ธนวัฒน์ จงสูงเนิน
+        </p>
 
         <hr>
 
-        <ol>
-            <!-- Email -->
+        <ol class="contact-list">
+
             <li>
                 <div class="contact-box">
                     <h3>Email</h3>
-                    <p>
-                        <a href="mailto:thanawatjongsungnern@gmail.com">
-                            thanawatjongsungnern@gmail.com
-                        </a>
-                    </p>
+                    <a href="mailto:thanawatjongsungnern@gmail.com">
+                        thanawatjongsungnern@gmail.com
+                    </a>
                 </div>
             </li>
 
-            <!-- Phone Number -->
             <li>
                 <div class="contact-box">
                     <h3>Phone Number</h3>
-                    <p>
-                        <a href="tel:0917188068">
-                            091-718-8068
-                        </a>
-                    </p>
+                    <a href="tel:0917188068">
+                        091-718-8068
+                    </a>
                 </div>
             </li>
 
-            <!-- Instagram -->
             <li>
                 <div class="contact-box">
                     <h3>Instagram</h3>
-                    <p>
-                        <a href="https://www.instagram.com/_peach.tnw?psln=dWpwbXdqcGVpbDMx&utm_source=qr"
-                           target="_blank">
-                            instagram.com/_peach.tnw
-                        </a>
-                    </p>
+                    <a href="https://www.instagram.com/_peach.tnw?psln=dWpwbXdqcGVpbDMx&utm_source=qr"
+                       target="_blank">
+                        instagram.com/_peach.tnw
+                    </a>
                 </div>
             </li>
+
         </ol>
 
-        <a href="index.html" class="back-button">
-            Back to Home
+        <a href="index.html" class="contact-back">
+            ← Back to Home
         </a>
 
     </div>
 
-    <footer>
-        <a href="index.html">Home</a>
-    </footer>
-
 </body>
 </html>
+
