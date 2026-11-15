@@ -1,6 +1,196 @@
-<!DOCTYPE html><html lang="th"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact | ธนวัฒน์ จงสูงเนิน</title><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="wrap nav"><a class="brand" href="index.html">🎄 TANAWAT <span>MY PAGE</span></a><nav class="navlinks"><a href="index.html">หน้าหลัก</a><a href="index.html#profile">ประวัติส่วนตัว</a><a href="contact.html">ติดต่อ</a></nav></div></header>
-<main class="wrap"><div class="hero"><div class="eyebrow">✦ GET IN TOUCH ✦</div><h1>Contact Me</h1><p>กรอกแบบฟอร์มด้านล่างเพื่อส่งข้อความถึงผม</p></div>
-<section class="panel"><h2 class="section-title">แบบฟอร์มการติดต่อ</h2><form id="contactForm"><div class="form-grid"><div class="field"><label for="name">ชื่อผู้ติดต่อ</label><input id="name" name="name" type="text" placeholder="กรอกชื่อของคุณ" required></div><div class="field"><label for="email">อีเมล</label><input id="email" name="email" type="email" placeholder="name@example.com" required></div><div class="field full"><label for="subject">หัวข้อ</label><input id="subject" name="subject" type="text" placeholder="ระบุหัวข้อที่ต้องการติดต่อ" required></div><div class="field full"><label for="message">ข้อความ</label><textarea id="message" name="message" placeholder="พิมพ์ข้อความของคุณ..." required></textarea></div></div><div class="actions"><button class="btn" type="submit">ส่งข้อความ</button><a class="btn secondary" href="index.html">กลับหน้าหลัก</a></div><p class="note">หมายเหตุ: ฟอร์มนี้เป็นตัวอย่าง Frontend ยังไม่ได้เชื่อมต่อระบบรับข้อความหรือฐานข้อมูล</p></form></section></main>
-<footer>🎄 Merry Christmas · ธนวัฒน์ จงสูงเนิน 🎄</footer>
-<script>document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();alert('ส่งตัวอย่างแบบฟอร์มเรียบร้อย! หากต้องการรับข้อความจริง ต้องเชื่อมต่อ Backend หรือบริการ Form เพิ่มเติม');this.reset();});</script></body></html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f5ff;
+            background-image: radial-gradient(#b5ccf5 1px, transparent 1px);
+            background-size: 24px 24px;
+            color: #183153;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 50px 40px 40px;
+            border: 1px solid #d5e0f0;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .subtitle {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #4269a5;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 22px;
+            color: #183153;
+        }
+
+        .name {
+            font-size: 16px;
+            margin-bottom: 34px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #d5e0f0;
+            margin-bottom: 30px;
+        }
+
+        ol {
+            padding-left: 26px;
+        }
+
+        li {
+            padding-left: 5px;
+            margin-bottom: 18px;
+        }
+
+        .contact-box {
+            border: 1px solid #3865bd;
+            border-radius: 9px;
+            padding: 14px 12px;
+            min-height: 85px;
+            transition: 0.3s;
+        }
+
+        .contact-box:hover {
+            background-color: #f5f8ff;
+            transform: translateY(-2px);
+        }
+
+        .contact-box h3 {
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .contact-box p,
+        .contact-box a {
+            font-size: 14px;
+            color: #183153;
+        }
+
+        .contact-box a:hover {
+            color: #3865bd;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #3865a8;
+            color: white;
+            text-decoration: none;
+            padding: 14px 22px;
+            border-radius: 6px;
+            margin-top: 16px;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #244779;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #315c9c;
+            margin: 0 5px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 35px 22px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <p class="subtitle">CONTACT INFORMATION</p>
+
+        <h1>Contact Me</h1>
+
+        <p class="name">ธนวัฒน์ จงสูงเนิน</p>
+
+        <hr>
+
+        <ol>
+            <!-- Email -->
+            <li>
+                <div class="contact-box">
+                    <h3>Email</h3>
+                    <p>
+                        <a href="mailto:thanawatjongsungnern@gmail.com">
+                            thanawatjongsungnern@gmail.com
+                        </a>
+                    </p>
+                </div>
+            </li>
+
+            <!-- Phone Number -->
+            <li>
+                <div class="contact-box">
+                    <h3>Phone Number</h3>
+                    <p>
+                        <a href="tel:0917188068">
+                            091-718-8068
+                        </a>
+                    </p>
+                </div>
+            </li>
+
+            <!-- Instagram -->
+            <li>
+                <div class="contact-box">
+                    <h3>Instagram</h3>
+                    <p>
+                        <a href="https://www.instagram.com/_peach.tnw?psln=dWpwbXdqcGVpbDMx&utm_source=qr"
+                           target="_blank">
+                            instagram.com/_peach.tnw
+                        </a>
+                    </p>
+                </div>
+            </li>
+        </ol>
+
+        <a href="index.html" class="back-button">
+            Back to Home
+        </a>
+
+    </div>
+
+    <footer>
+        <a href="index.html">Home</a>
+    </footer>
+
+</body>
+</html>
